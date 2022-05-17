@@ -1,7 +1,7 @@
 <?php
 
 extract ($_REQUEST);
-require "../models/conexionBasesDatos.php";
+require "../models/conexionPDO.php";
 /* los variables que viene del formulario son: $login, $password */
 
 /*asigno a la variable password el valor encriptado de lo que colocaron
@@ -22,12 +22,12 @@ if ($existe==1)  //quiere decir que los datos estan bien
 	$usuario=$resultado->fetch_object();
         session_start();
 	$_SESSION['user']= $usuario->name;	
-	header('Location: ../vista/mainmenu');
+	header('Location: ../vista/mainmenu.php');
 	
 }
 else
 {
-   echo"<script>  alert('Usuario o clave incorrecta. Vuelva a digitarlos por favor, si no esta registrado por favor ingresar al registro'); window.location.href='../vista/registro'; </script>";
+   echo"<script>  alert('Usuario o clave incorrecta. Vuelva a digitarlos por favor, si no esta registrado por favor ingresar al registro'); window.location.href='../vista/registro.php'; </script>";
 }
 
 ?>

@@ -85,7 +85,7 @@
 
 <center>
 
-    <p> <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> solo para usuarios regirstrados
+    <p> <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> solo para usuarios registrados
     
     </p>
 

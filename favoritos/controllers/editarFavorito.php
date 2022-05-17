@@ -23,7 +23,7 @@ $descripcion = $_POST["descripcion"];
 $sentencia = $conn->prepare("UPDATE favorite SET title = ?,  url = ?, description = ?, categoryAsoc = ?, visible = ? WHERE id = ?;");
 $resultado = $sentencia->execute([$titulo, $pagina, $descripcion, $categoria, $visible, $id]); # Pasar en el mismo orden de los ?
 if ($resultado === true) {
-    header("Location: ../vista/mainmenu");
+    header("Location: ../vista/mainmenu.php");
 } else {
     echo "Algo salió mal. Por favor verifica que la tabla exista, así como el ID ";
 }
